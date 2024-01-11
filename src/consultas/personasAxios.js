@@ -13,16 +13,16 @@ export const getPersonById = async (id) => {
 };
 
 export const createPerson = async (personData) => {
-    const response = await axios.post(`${API_URL}/personas/insertar`, personData);
+    const response = await axios.post(`${API_URL}/personas`, personData);
     return response.data;
 };
 
 export const updatePerson = async (id, updatedData) => {
-    const response = await axios.put(`${API_URL}/personas/actualizar/${id}`, updatedData);
+    const response = await axios.put(`${API_URL}/personas/${id}`, updatedData);
     return response.data;
 };
 
 export const deletePerson = async (id) => {
-    const response = await axios.delete(`${API_URL}/personas/eliminar/${id}`);
+    const response = await axios.delete(`${API_URL}/personas/${id}`);
     return response.data;
 };
